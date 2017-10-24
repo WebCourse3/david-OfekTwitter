@@ -1,0 +1,27 @@
+.navbar-collapse {
+	flex-basis: 0px;
+}
+.collapse {
+	display: inline-block;
+}
+.navbar-nav{
+	flex-direction: row;
+	float: right;
+}
+
+.navbar-nav .nav-link {
+	 padding-right: 10px;
+	 padding-left: 10px;
+}
+
+.ot-body{
+	margin-top: 2%;
+}
+
+.tweet-row{
+	margin-top: 15px;
+}
+
+.tweet-username{
+	font-weight: bold;
+}
