@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14c717b1-7220-41fa-bd03-84394dd28195" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Users.css" afterPath="$PROJECT_DIR$/css/Users.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -112,6 +111,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -223,7 +227,7 @@
       <workItem from="1508753351624" duration="3377000" />
       <workItem from="1508760992009" duration="32000" />
       <workItem from="1508763784210" duration="3558000" />
-      <workItem from="1508825139405" duration="551000" />
+      <workItem from="1508825139405" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="cool">
       <created>1508767348946</created>
@@ -232,11 +236,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508767348946</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cool">
+      <created>1508825703374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1508825703374</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7518000" />
+    <option name="totallyTimeSpent" value="7610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
