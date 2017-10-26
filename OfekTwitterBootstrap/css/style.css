@@ -60,3 +60,22 @@
 .sign-form{
 	margin-top: 5%;
 }
+
+.sign-form .form-row:last-child{
+	margin-bottom: 4%;
+}
+
+.sign-heading{
+	background-color: #343a40;
+	color: #e6e6e6;
+	margin-bottom: 5%;
+}
+
+.sign-heading h5{
+	margin-left: 5%;
+}
+
+.label-col label{
+	display: inline-block;
+	vertical-align: sub;
+}

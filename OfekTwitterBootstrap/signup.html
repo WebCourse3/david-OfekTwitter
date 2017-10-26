@@ -11,16 +11,16 @@
 <header>
 	<nav class="navbar navbar-dark bg-dark ot-nav">
 		<a class="navbar-brand" href="index.html">
-			<img src="http://d33wubrfki0l68.cloudfront.net/545dac4ebd31767f0fc66d20914a8118756962b4/d127c/images/ofek.png" width="30" height="30" class="d-inline-block align-top" alt="">
+			<img src="images/ofek.png" width="30" height="30" class="d-inline-block align-top" alt="">
 			OfekTwitter
 		</a>
 		<div class="collapse navbar-collapse  mr-auto" id="navbarSupportedContent">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href='sign_in'>Sign in</a>
+					<a class="nav-link" href='signin.html'>Sign in</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href='sign_up'>Sign up</a>
+					<a class="nav-link" href='signup.html'>Sign up</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href='users.html'>Users</a>
@@ -31,11 +31,14 @@
 	</nav>
 </header>
 
-<form class="sign-form">
+<form>
 	<div class="row">
-		<div class="col-lg-4 offset-lg-4 border border-secondary rounded">
+		<div class="col-lg-4 offset-lg-4 border border-secondary rounded sign-form">
+			<div class="row sign-heading">
+				<h5>Sign Up</h5>
+			</div>
 			<div class="form-group form-row">
-				<div class="col-lg-4">
+				<div class="col-lg-4 label-col">
 					<label for="exampleInputEmail1">Email address</label>
 				</div>
 				<div class="col-lg-8">
@@ -43,7 +46,7 @@
 				</div>
 			</div>
 			<div class="form-group form-row">
-				<div class="col-lg-4">
+				<div class="col-lg-4 label-col">
 					<label for="exampleInputPassword1">Password</label>
 				</div>
 				<div class="col-lg-8">
@@ -51,15 +54,17 @@
 				</div>
 			</div>
 			<div class="form-group form-row">
-				<div class="col-lg-4">
+				<div class="col-lg-4 label-col">
 					<label for="exampleInputConfirmation1">Confirm Password</label>
 				</div>
 				<div class="col-lg-8">
 					<input type="password" class="form-control" id="exampleInputConfirmation1" placeholder="Confirm Password">
 				</div>
 			</div>
-			<div class="col-lg-8 offset-lg-4">
-				<button type="submit" class="btn btn-primary">Sign Up</button>
+			<div class="form-row">
+				<div class="col-lg-8 offset-lg-4">
+					<button type="submit" class="btn btn-primary">Sign Up</button>
+				</div>
 			</div>
 		</div>
 	</div>
