@@ -4,6 +4,7 @@
 	<title>OfekTwitter</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="scripts/index.js"></script>
 </head>
 <body>
 <header>
@@ -31,84 +32,20 @@
 
 
 <div class="ot-body">
-	<div class="row justify-content-lg-start">
-		<div class="col-lg-8 offset-lg-1">
-			<div class="input-group">
-				<input type="textarea" class="form-control" placeholder="tweet text..." aria-label="tweet text...">
-				<span class="input-group-btn">
-	                <button class="btn btn-secondary" type="button">publish</button>
+	<div class="container">
+		<div class="row justify-content-lg-start">
+			<div class="col-lg-11 offset-lg-1">
+				<div class="input-group tweet-input">
+					<input type="textarea" id="newTweetText" class="form-control" placeholder="tweet text..." aria-label="tweet text...">
+					<span class="input-group-btn">
+	                <button class="btn btn-secondary" type="button" id="publish-tweet">publish</button>
 	            </span>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="row tweet-row">
-		<div class="col-lg-1 offset-lg-1 tweet-avatar">
-			<img src="images/useravatar.png"/>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 tweet-username">
-				James Bond says:
-			</div>
-			<div class="col-lg-10 tweet-text">
-				Blabla bla...
-			</div>
-		</div>
-	</div>
+		<div id="tweet-list">
 
-	<div class="row tweet-row">
-		<div class="col-lg-1 offset-lg-1 tweet-avatar">
-			<img src="images/useravatar.png"/>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 tweet-username">
-				James Bond says:
-			</div>
-			<div class="col-lg-10 tweet-text">
-				Bond, James bond
-			</div>
-		</div>
-	</div>
-
-	<div class="row tweet-row">
-		<div class="col-lg-1 offset-lg-1 tweet-avatar">
-			<img src="images/useravatar.png"/>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 tweet-username">
-				Albert Einstein says:
-			</div>
-			<div class="col-lg-10 tweet-text">
-				E = mc^2
-			</div>
-		</div>
-	</div>
-
-	<div class="row tweet-row">
-		<div class="col-lg-1 offset-lg-1 tweet-avatar">
-			<img src="images/useravatar.png"/>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 tweet-username">
-				Bill Gates says:
-			</div>
-			<div class="col-lg-10 tweet-text">
-				I think 64 bytes should be enough for everyone
-			</div>
-		</div>
-	</div>
-
-	<div class="row tweet-row">
-		<div class="col-lg-1 offset-lg-1 tweet-avatar">
-			<img src="images/useravatar.png"/>
-		</div>
-		<div class="row">
-			<div class="col-lg-10 tweet-username">
-				Frodo says:
-			</div>
-			<div class="col-lg-10 tweet-text">
-				My Precious
-			</div>
 		</div>
 	</div>
 </div>

@@ -4,6 +4,7 @@
 	<title>OfekTwitter | Users</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="scripts/users.js"></script>
 </head>
 <body>
 <header>
@@ -45,113 +46,15 @@
 
 		<div class="row justify-content-lg-start users-row">
 			<div class="col-lg-8 offset-lg-1 users-list">
-				<div class="row">
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">follow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Marty McFly</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">follow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>James Bond</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">unfollow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Janis Joplin</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">follow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Mark Twain</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">unfollow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Albert Einstein</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">follow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Frodo</p>
-						</div>
-					</div>
-					<div class="user-cell col-lg-2 border border-secondary rounded">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">follow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Bill Gates</p>
-						</div>
-					</div>
+				<div class="row" id="users-list">
+
 				</div>
 			</div>
 
 			<div class="col-lg-3 followees-list">
 				<h3 >Followees</h3>
-				<div class="row justify-content-md-center">
-					<div class="user-cell border border-secondary rounded col-lg-6 offset-lg-6">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">unfollow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Albert Einstein</p>
-						</div>
-					</div>
+				<div class="row justify-content-md-center" id="followees-list">
 
-					<div class="user-cell border border-secondary rounded col-lg-6 offset-lg-6">
-						<div class="user-avatar-img">
-							<img src="images/useravatar.png"/>
-						</div>
-						<div>
-							<button class="btn btn-primary btn-sm" type="submit">unfollow</button>
-						</div>
-						<div class="user-cell-name">
-							<p>Janis Joplin</p>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

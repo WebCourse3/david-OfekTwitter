@@ -22,8 +22,16 @@
 	margin-top: 15px;
 }
 
+.tweet-input{
+	width: 70%;
+}
+
 .tweet-username{
 	font-weight: bold;
+}
+
+.tweet-data{
+	padding-left: 0px;
 }
 
 .users-row{
