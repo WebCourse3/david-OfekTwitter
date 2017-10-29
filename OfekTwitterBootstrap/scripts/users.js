@@ -3,7 +3,6 @@
 // FUNCTIONS
 window.onload = function() {
 	loadAllUsers();
-	loadFollweesList();
 }
 
 var avatar = "images/useravatar.png";
@@ -81,16 +80,12 @@ function createNewFollowButton(followState, id){
 	newButton.id = "button" + id;
 	newButton.className = "btn btn-primary btn-sm";
 	newButton.type = "submit";
-	// followState ? newButton.appendChild(document.createTextNode(buttonUnfollow)) :
-	// 			  newButton.appendChild(document.createTextNode(buttonFollow));
 
 	followState ? newButton.textContent = buttonUnfollow : newButton.textContent = buttonFollow;
 
 	newButton.addEventListener("click", function (event) {
-
 		var buttonClicked = event.target;
 		changeFollowStatus(id, buttonClicked);
-
 	});
 
 	return newButton;
@@ -117,14 +112,12 @@ function changeFollowStatus(id, buttonCliked) {
 	if (user.following) {
 		followeesList.removeChild(buttonCliked.parentElement);
 		user.following = !user.following;
-		var userFollowButton = document.getElementById("button" + id);
-		userFollowButton.textContent = buttonFollow;
+		addUser(user.name, user.following, user.id, avatar, usersListId);
 	}
 	else {
 		usersList.removeChild(buttonCliked.parentElement);
 		user.following = !user.following;
 		addUser(user.name, user.following, user.id, avatar, followeeListId);
-		buttonCliked.textContent = buttonUnfollow;
 	}
 }
 
