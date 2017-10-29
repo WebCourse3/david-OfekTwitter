@@ -9,6 +9,8 @@ window.onload = function() {
 var avatar = "images/useravatar.png";
 var usersListId = "users-list";
 var followeeListId = "followees-list";
+var buttonFollow = "follow";
+var buttonUnfollow = "unfollow";
 
 var users = [
 	{name: 'Marty McFly', following:false, id:1},
@@ -23,16 +25,13 @@ var users = [
 function loadAllUsers() {
 	for(var i=0; i < users.length; i++){
 		var user = users[i];
-		addUser(user.name, user.following, user.id, avatar, usersListId);
-	}
-}
-
-function loadFollweesList() {
-	for(var i=0; i < users.length; i++){
-		var user = users[i];
 
 		if(user.following){
 			addUser(user.name, user.following, user.id, avatar, followeeListId);
+		}
+		else
+		{
+			addUser(user.name, user.following, user.id, avatar, usersListId);
 		}
 	}
 }
@@ -45,12 +44,18 @@ function addUser(name, followingState, id, avatar, listId) {
 
 function createNewUser(name, followState, id, avatar, listId) {
 	var newUser = document.createElement("div");
-	newUser.id = id;
+
 
 	if(listId == usersListId)
+	{
+		newUser.id = "user" + id;
 		newUser.className="user-cell col-lg-2 border border-secondary rounded";
+	}
 	else
+	{
+		newUser.id = "followee" + id;
 		newUser.className="user-cell border border-secondary rounded col-lg-6 offset-lg-6";
+	}
 
 	newUser.appendChild(CreateNewAvatarDiv(avatar));
 	newUser.appendChild(createNewFollowButton(followState, id));
@@ -73,15 +78,18 @@ function createNewImg(picture){
 
 function createNewFollowButton(followState, id){
 	var newButton = document.createElement('button');
+	newButton.id = "button" + id;
 	newButton.className = "btn btn-primary btn-sm";
 	newButton.type = "submit";
-	followState ? newButton.appendChild(document.createTextNode('unfollow')) :
-				  newButton.appendChild(document.createTextNode('follow'));
+	// followState ? newButton.appendChild(document.createTextNode(buttonUnfollow)) :
+	// 			  newButton.appendChild(document.createTextNode(buttonFollow));
+
+	followState ? newButton.textContent = buttonUnfollow : newButton.textContent = buttonFollow;
 
 	newButton.addEventListener("click", function (event) {
-		debugger;
-		// changeFollowStatus(followState, id)
-		var element = event.target.parentElement();
+
+		var buttonClicked = event.target;
+		changeFollowStatus(id, buttonClicked);
 
 	});
 
@@ -101,17 +109,31 @@ function createNewParagraph(string){
 	return newParagraph;
 }
 
-function changeFollowStatus(followState, id) {
+function changeFollowStatus(id, buttonCliked) {
 	var followeesList = document.getElementById(followeeListId);
+	var usersList = document.getElementById(usersListId);
+	var user = getUserById(id);
 
-	if (followState) {
-		followeesList.removeChild(document.getElementById(id));
+	if (user.following) {
+		followeesList.removeChild(buttonCliked.parentElement);
+		user.following = !user.following;
+		var userFollowButton = document.getElementById("button" + id);
+		userFollowButton.textContent = buttonFollow;
 	}
 	else {
-		// removedUserCard = UnfolllowElement.removeChild(document.getElementById(userCardID));
-		// FollowElement.appendChild(removedUserCard);
-		// followButton.textContent = UnfollowText;
-		// removedUserCard.className = followClassName;
-		// isFollow = !isFollow;
+		usersList.removeChild(buttonCliked.parentElement);
+		user.following = !user.following;
+		addUser(user.name, user.following, user.id, avatar, followeeListId);
+		buttonCliked.textContent = buttonUnfollow;
+	}
+}
+
+function getUserById(id) {
+	for(var i = 0; i < users.length; i++)
+	{
+		if(users[i].id == id)
+		{
+			return users[i];
+		}
 	}
 }
