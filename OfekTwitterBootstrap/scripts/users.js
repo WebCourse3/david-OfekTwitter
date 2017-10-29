@@ -125,7 +125,7 @@ function changeFollowStatus(id, buttonCliked) {
 
 function filter() {
 	var filterString = document.getElementById("filter-textarea").value;
-    var notFollowingUsers = users.filter(x=> !x.following);
+    var notFollowingUsers = users.filter(x => !x.following);
 
 	for(var i = 0; i < notFollowingUsers.length; i++)
 	{

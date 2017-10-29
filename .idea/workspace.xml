@@ -4,7 +4,6 @@
     <list default="true" id="14c717b1-7220-41fa-bd03-84394dd28195" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js" afterPath="$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OfekTwitterBootstrap/users.html" afterPath="$PROJECT_DIR$/OfekTwitterBootstrap/users.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,8 +66,8 @@
           <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="363">
-                  <caret line="135" column="5" lean-forward="true" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+                <state relative-caret-position="346">
+                  <caret line="127" column="34" lean-forward="false" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -272,7 +271,7 @@
       <workItem from="1508825139405" duration="551000" />
       <workItem from="1508911921247" duration="8132000" />
       <workItem from="1508997959432" duration="22253000" />
-      <workItem from="1509260820208" duration="9385000" />
+      <workItem from="1509260820208" duration="9436000" />
     </task>
     <task id="LOCAL-00001" summary="cool">
       <created>1508767348946</created>
@@ -351,11 +350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509267297204</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Final">
+      <created>1509270524165</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1509270524165</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47288000" />
+    <option name="totallyTimeSpent" value="47339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -409,7 +415,8 @@
     <MESSAGE value="final" />
     <MESSAGE value="some tries" />
     <MESSAGE value="Much better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Much better" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -580,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="135" column="5" lean-forward="true" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+        <state relative-caret-position="346">
+          <caret line="127" column="34" lean-forward="false" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
           <folding />
         </state>
       </provider>
