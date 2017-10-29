@@ -20,6 +20,8 @@
 
 .tweet-row{
 	margin-top: 15px;
+
+
 }
 
 .tweet-input{
@@ -86,4 +88,32 @@
 .label-col label{
 	display: inline-block;
 	vertical-align: sub;
+}
+
+.testRow{
+	display: block;
+	margin-top: 3%;
+}
+
+.testCol{
+	background-color: #bafdba;
+	border: 1px solid black;
+}
+
+.testRow ul{
+	padding-left: 0px;
+}
+
+.testRow ul li{
+	list-style: none;
+	border: 1px solid black;
+	margin-top: 0.5%;
+}
+
+.success{
+	background-color: #bafdba;
+}
+
+.failed{
+	background-color: firebrick;
 }
