@@ -4,6 +4,7 @@
     <list default="true" id="14c717b1-7220-41fa-bd03-84394dd28195" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js" afterPath="$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OfekTwitterBootstrap/users.html" afterPath="$PROJECT_DIR$/OfekTwitterBootstrap/users.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +43,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+                <state relative-caret-position="85">
+                  <caret line="5" column="85" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="85" />
                   <folding />
                 </state>
               </provider>
@@ -52,8 +53,8 @@
           <file leaf-file-name="users.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/users.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="114" lean-forward="false" selection-start-line="6" selection-start-column="114" selection-end-line="6" selection-end-column="114" />
+                <state relative-caret-position="82">
+                  <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -66,8 +67,8 @@
           <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1921">
-                  <caret line="113" column="41" lean-forward="false" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+                <state relative-caret-position="363">
+                  <caret line="135" column="5" lean-forward="true" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -271,7 +272,7 @@
       <workItem from="1508825139405" duration="551000" />
       <workItem from="1508911921247" duration="8132000" />
       <workItem from="1508997959432" duration="22253000" />
-      <workItem from="1509260820208" duration="6172000" />
+      <workItem from="1509260820208" duration="9385000" />
     </task>
     <task id="LOCAL-00001" summary="cool">
       <created>1508767348946</created>
@@ -343,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509267113004</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Much better">
+      <created>1509267297204</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1509267297204</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44075000" />
+    <option name="totallyTimeSpent" value="47288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -400,7 +408,8 @@
     <MESSAGE value="coolz" />
     <MESSAGE value="final" />
     <MESSAGE value="some tries" />
-    <option name="LAST_COMMIT_MESSAGE" value="some tries" />
+    <MESSAGE value="Much better" />
+    <option name="LAST_COMMIT_MESSAGE" value="Much better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,14 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -561,18 +562,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="85" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/users.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="114" lean-forward="false" selection-start-line="6" selection-start-column="114" selection-end-line="6" selection-end-column="114" />
+        <state relative-caret-position="82">
+          <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OfekTwitterBootstrap/scripts/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="41" lean-forward="false" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+        <state relative-caret-position="363">
+          <caret line="135" column="5" lean-forward="true" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
           <folding />
         </state>
       </provider>

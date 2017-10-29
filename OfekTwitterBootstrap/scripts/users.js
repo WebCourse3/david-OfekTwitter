@@ -3,6 +3,8 @@
 // FUNCTIONS
 window.onload = function() {
 	loadAllUsers();
+
+	document.getElementById("filter-textarea").addEventListener("keyup", filter);
 }
 
 var avatar = "images/useravatar.png";
@@ -118,6 +120,19 @@ function changeFollowStatus(id, buttonCliked) {
 		usersList.removeChild(buttonCliked.parentElement);
 		user.following = !user.following;
 		addUser(user.name, user.following, user.id, avatar, followeeListId);
+	}
+}
+
+function filter() {
+	var filterString = document.getElementById("filter-textarea").value;
+    var notFollowingUsers = users.filter(x=> !x.following);
+
+	for(var i = 0; i < notFollowingUsers.length; i++)
+	{
+		var user = notFollowingUsers[i];
+		user.name.substr(0, filterString.length).toLowerCase() === filterString.toLowerCase() ?
+			document.getElementById('user' + user.id).style.display = '' :
+			document.getElementById('user' + user.id).style.display = 'none';
 	}
 }
 
