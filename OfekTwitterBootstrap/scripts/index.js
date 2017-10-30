@@ -3,7 +3,9 @@
 // FUNCTIONS
 window.onload = function() {
 	loadAllTweets();
-	document.getElementById("publish-tweet").addEventListener("click", publishTweet);
+
+	$("#publish-tweet")[0].addEventListener("click", publishTweet);
+	//document.getElementById("publish-tweet").addEventListener("click", publishTweet);
 }
 
 var avatar = "images/useravatar.png";
@@ -20,11 +22,14 @@ function loadAllTweets() {
 		var tweet = tweets[i];
 		addTweet(tweet.username, tweet.text, avatar);
 	}
+
+	$("div .test p")[0].appendChild(document.createTextNode("blabla"));
 }
 
 function publishTweet() {
 	var publishTextera = document.getElementById("newTweetText");
-	if(publishTextera.value != '')
+
+	if(publishTextera.elements != '')
 	{
 		console.log("publishTextera: " + publishTextera.value)
 		addTweet(user,publishTextera.value, avatar);
