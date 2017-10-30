@@ -3,37 +3,36 @@ var $ = function (query) {
 }
 
 var OfekQuery = function (query) {
-	var bodyElements = document.body.childNodes;
 	this.elements = [];
-	this.filterElements(this.elements, bodyElements, query.split(' '))
+	this.filterElements(this.elements, document.body.childNodes, query.split(' '))
 };
 
 OfekQuery.prototype = {
 
-	filterElements: function (elements, elementsToCheck, queryArray) {
-		if (queryArray.length == 0 || elementsToCheck.length == 0) {
+	filterElements: function (elements, elementsToFilter, selectors) {
+		if (selectors.length == 0 || elementsToFilter.length == 0) {
 			return
 		}
-		var firstArg = queryArray[0];
-		var filteredElements = OfekQuery.filterArray(elementsToCheck, firstArg);
-		var unfilteredElements = OfekQuery.ReversrfilterArray(elementsToCheck, firstArg);
-		if (queryArray.length == 1) {
+		var firstSelector = selectors[0];
+		var filteredElements = OfekQuery.filterArray(elementsToFilter, firstSelector);
+		var unfilteredElements = OfekQuery.ReversefilterArray(elementsToFilter, firstSelector);
+		if (selectors.length == 1) {
 			filteredElements.map(OfekQuery.prototype.addChildToElements(elements));
-			filteredElements.map(OfekQuery.prototype.FilterNextNodes(elements, queryArray));
+			filteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors));
 		}
-		filteredElements.map(OfekQuery.prototype.FilterNextNodes(elements, queryArray.slice(1)));
-		unfilteredElements.map(OfekQuery.prototype.FilterNextNodes(elements, queryArray));
+		filteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors.slice(1)));
+		unfilteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors));
 	},
 
 	addChildToElements: function (elements) {
-		return function (elemnt) {
-			elements.push(elemnt);
+		return function (element) {
+			elements.push(element);
 		}
 	},
 
-	FilterNextNodes: function (elements, queryArray) {
+	filterNextNodes: function (elements, selectors) {
 		return function (element) {
-			OfekQuery.prototype.filterElements(elements, element.childNodes, queryArray);
+			OfekQuery.prototype.filterElements(elements, element.childNodes, selectors);
 		}
 	},
 
@@ -141,38 +140,28 @@ OfekQuery.filterArray = function (list, arg) {
 	return arr.filter(filterFunc);
 }
 
-OfekQuery.ReversrfilterArray = function (list, arg) {
+OfekQuery.ReversefilterArray = function (list, arg) {
 	if (list.length == 0) return [];
 	var arr = Array.isArray(list) ? list : Array.prototype.slice.call(list);
 	var filterFunc = OfekQuery.getFilterFunc(arg);
 	return arr.filter(function (element) {
 		return !filterFunc(element);
-	})
+	});
 }
 
 OfekQuery.getFilterFunc = function (arg) {
 	var type = arg[0];
-	if (type == '.') {
+	if (type == '.')
 		return OfekQuery.filterByClass(arg.substring(1));
-	}
-	;
-	if (type == '#') {
+	else if (type == '#')
 		return OfekQuery.filterByElementID(arg.substring(1));
-	}
-	;
-	return OfekQuery.filterByElementType(arg);
+	else
+		return OfekQuery.filterByElementType(arg);
 }
 
 OfekQuery.filterByClass = function (className) {
 	return function (element) {
-		var elementClass = element.className;
-		if(elementClass == null)return false;
-		if (elementClass.indexOf(className) == -1)return false;
-		var classList = elementClass.split(' ');
-		for (var i = 0; i < classList.length; i++) {
-			if (classList[i] == className) return true;
-		}
-		return false;
+		return element.className == null ? false : element.className.indexOf(className) != -1;
 	}
 }
 
@@ -185,6 +174,5 @@ OfekQuery.filterByElementID = function (id) {
 OfekQuery.filterByElementType = function (type) {
 	return function (element) {
 		return element.tagName == null ? false : element.tagName.toLowerCase() == type;
-
 	}
 }

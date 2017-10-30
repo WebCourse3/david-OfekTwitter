@@ -23,7 +23,7 @@ function loadAllTweets() {
 		addTweet(tweet.username, tweet.text, avatar);
 	}
 
-	$("div .test p")[0].appendChild(document.createTextNode("blabla"));
+	$("span .test p")[0].appendChild(document.createTextNode("blabla"));
 }
 
 function publishTweet() {
