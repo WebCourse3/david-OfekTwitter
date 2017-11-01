@@ -26,7 +26,7 @@ function loadAllTweets() {
 function publishTweet() {
 	var publishTextera = document.getElementById("newTweetText");
 
-	if(publishTextera.elements != '')
+	if(publishTextera.value != '')
 	{
 		console.log("publishTextera: " + publishTextera.value)
 		addTweet(user,publishTextera.value, avatar);
