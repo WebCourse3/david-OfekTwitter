@@ -4,8 +4,7 @@
 window.onload = function() {
 	loadAllTweets();
 
-	//$("#publish-tweet")[0].addEventListener("click", publishTweet);
-	//document.getElementById("publish-tweet").addEventListener("click", publishTweet);
+	$("#publish-tweet")[0].addEventListener("click", publishTweet);
 }
 
 var avatar = "images/useravatar.png";
@@ -22,9 +21,6 @@ function loadAllTweets() {
 		var tweet = tweets[i];
 		addTweet(tweet.username, tweet.text, avatar);
 	}
-
-	$("span .test p")[0].appendChild(document.createTextNode("blabla"));
-	//$("p")[0].appendChild(document.createTextNode("blabla"));
 }
 
 function publishTweet() {
