@@ -1,0 +1,178 @@
+var $ = function (query) {
+	return new OfekQuery(query).elements;
+}
+
+var OfekQuery = function (query) {
+	this.elements = [];
+	this.filterElements(this.elements, document.body.childNodes, query.split(' '))
+};
+
+OfekQuery.prototype = {
+
+	filterElements: function (elements, elementsToFilter, selectors) {
+		if (selectors.length == 0 || elementsToFilter.length == 0) {
+			return
+		}
+		var firstSelector = selectors[0];
+		var filteredElements = OfekQuery.filterArray(elementsToFilter, firstSelector);
+		var unfilteredElements = OfekQuery.ReversefilterArray(elementsToFilter, firstSelector);
+		if (selectors.length == 1) {
+			filteredElements.map(OfekQuery.prototype.addChildToElements(elements));
+			filteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors));
+		}
+		filteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors.slice(1)));
+		unfilteredElements.map(OfekQuery.prototype.filterNextNodes(elements, selectors));
+	},
+
+	addChildToElements: function (elements) {
+		return function (element) {
+			elements.push(element);
+		}
+	},
+
+	filterNextNodes: function (elements, selectors) {
+		return function (element) {
+			OfekQuery.prototype.filterElements(elements, element.childNodes, selectors);
+		}
+	},
+
+	all: function () {
+		if (this.elements.length == 0) return true;
+		var argumentsFunc = Array.prototype.slice.call(arguments);
+		var sizeBeforeFilter = this.elements.length;
+		var filtered = this.elements.filter(function (element) {
+			var bool = true;
+			argumentsFunc.map(function (fn) {
+				if (!fn(element)) {
+					bool = false
+				}
+			});
+			return bool;
+		})
+		return filtered.length == sizeBeforeFilter;
+	},
+
+	any: function () {
+		if (this.elements.length == 0) return false;
+		var argumentsFunc = Array.prototype.slice.call(arguments);
+		var filtered = this.elements.filter(function (element) {
+			var bool = true;
+			argumentsFunc.map(function (fn) {
+				if (!fn(element)) {
+					bool = false
+				}
+			});
+			return bool;
+		});
+		return filtered.length > 0;
+	},
+
+	filter: function () {
+		var argumentsFunc = Array.prototype.slice.call(arguments);
+		if (this.elements.length == 0) return [];
+		return this.elements.filter(function (element) {
+			var bool = true;
+			argumentsFunc.map(function (fn) {
+				if (!fn(element)) {
+					bool = false
+				}
+			});
+			return bool;
+		})
+	},
+
+	css: function (property, value) {
+		for (var i = 0; i < this.elements.length; i++) {
+			this.elements[i].style[property] = value;
+		}
+	},
+
+	count: function () {
+		return this.elements.length;
+	},
+
+	getAttribute: function (attributeName) {
+		return this.elements.filter(function (element) {
+			return element[attributeName];
+		})
+	},
+
+	setAttribute: function (attributeName, attributeValue) {
+		for (var i = 0; i < this.elements.length; i++) {
+			this.elements[i][attributeName] = attributeValue;
+		}
+	},
+
+	get: function (index) {
+		return index < this.elements.length ? this.elements[index] : undefined;
+	},
+
+	addClass: function (class_name) {
+		for (var i = 0; i < this.elements.length; i++) {
+			this.elements[i].className += " " + class_name;
+		}
+	},
+
+	removeClass: function (class_name) {
+		for (var i = 0; i < this.elements.length; i++) {
+			this.elements[i].classList.remove(class_name);
+		}
+	},
+
+	each: function (fn) {
+		for (var i = 0; i < this.elements.length; i++) {
+			fn(this.elements[i]);
+		}
+	},
+
+	map: function (fn) {
+		return this.elements.map(function (element) {
+			return fn(element);
+		})
+	},
+}
+
+/* private functions */
+OfekQuery.filterArray = function (list, arg) {
+	if (list.length == 0) return [];
+	var arr = Array.isArray(list) ? list : Array.prototype.slice.call(list);
+	var filterFunc = OfekQuery.getFilterFunc(arg);
+	return arr.filter(filterFunc);
+}
+
+OfekQuery.ReversefilterArray = function (list, arg) {
+	if (list.length == 0) return [];
+	var arr = Array.isArray(list) ? list : Array.prototype.slice.call(list);
+	var filterFunc = OfekQuery.getFilterFunc(arg);
+	return arr.filter(function (element) {
+		return !filterFunc(element);
+	});
+}
+
+OfekQuery.getFilterFunc = function (arg) {
+	var type = arg[0];
+	if (type == '.')
+		return OfekQuery.filterByClass(arg.substring(1));
+	else if (type == '#')
+		return OfekQuery.filterByElementID(arg.substring(1));
+	else
+		return OfekQuery.filterByElementType(arg);
+}
+
+OfekQuery.filterByClass = function (className) {
+	return function (element) {
+		return element.className == null ? false : element.className.indexOf(className) != -1;
+	}
+}
+
+OfekQuery.filterByElementID = function (id) {
+	return function (element) {
+		return element.id == null ? false : element.id == id;
+	}
+}
+
+OfekQuery.filterByElementType = function (type) {
+	return function (element) {
+		return element.tagName == null ? false : element.tagName.toLowerCase() == type;
+	}
+}

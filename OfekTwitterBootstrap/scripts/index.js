@@ -3,7 +3,8 @@
 // FUNCTIONS
 window.onload = function() {
 	loadAllTweets();
-	document.getElementById("publish-tweet").addEventListener("click", publishTweet);
+
+	$("#publish-tweet")[0].addEventListener("click", publishTweet);
 }
 
 var avatar = "images/useravatar.png";
@@ -24,6 +25,7 @@ function loadAllTweets() {
 
 function publishTweet() {
 	var publishTextera = document.getElementById("newTweetText");
+
 	if(publishTextera.value != '')
 	{
 		console.log("publishTextera: " + publishTextera.value)
